@@ -40,7 +40,7 @@ jobs:
             cmake.exe -G "MinGW Makefiles" ^
             -DCMAKE_BUILD_TYPE=Release ^
             -DBUILD_SHARED_LIBS=OFF ^
-            -Dtinyxml2_BUILD_TESTING=OFF
+            -Dtinyxml2_BUILD_TESTING=OFF ^
             -DCMAKE_INSTALL_PREFIX="build/${{ env.cmakeInstallationPath }}" -B./build &&^
             cd build && cmake --build . && cmake --install . 
             
